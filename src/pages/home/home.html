@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Higher or Lower
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class = "content">
+  <!-- fill the screen with images of cards face down side by side -->
+  <img id = "card0" style="width:16%; display: inline-block" src="assets/imgs/cardBack.png"/>
+  <img id = "card1" style="width:16%; display: inline-block" src="assets/imgs/cardBack.png"/>
+  <img id = "card2" style="width:16%; display: inline-block" src="assets/imgs/cardBack.png"/>
+  <img id = "card3" style="width:16%; display: inline-block" src="assets/imgs/cardBack.png"/>
+  <img id = "card4" style="width:16%; display: inline-block" src="assets/imgs/cardBack.png"/>
+  <img id = "card5" style="width:16%; display: inline-block" src="assets/imgs/cardBack.png"/>
+
+  <!-- buttons with click methods -->
+  <!-- I used *ngIf to hide some of the buttons so the user couldn't guess higher or lower before first card -->
+  <button ion-button *ngIf="this.isPlayVisible" (click)="play()">Play</button>
+  <button ion-button *ngIf="this.isHigherVisible" (click)="higher()">Higher</button>
+  <button ion-button *ngIf="this.isLowerVisible" (click)="lower()">Lower</button>
+
+  <br>
+
+  <button ion-button (click) = "goToStats()">Get Stats</button>
+  <button ion-button (click) = "goToMovies()">Movies about gamblers</button>
+  
+</ion-content>
